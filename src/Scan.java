@@ -59,4 +59,8 @@ public class Scan {
   public void setIsofluraneDosage(double dosage){
     _isofluraneDosage = dosage;
   }
+  
+  public String toString(){
+    return _ketamineDosage + "," + _dexdomitorDosage + "," + _atipamezoleDosage + "," + _isofluraneDosage;
+  }
 }

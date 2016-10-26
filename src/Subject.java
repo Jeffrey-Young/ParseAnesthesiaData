@@ -21,5 +21,15 @@ public class Subject {
   private void computeCumulativeDoses(){
     //TODO need to compound the doses at each scan when writing them out or something
   }
+  
+  public String toString(){
+    String output = "";
+    int i = 1;
+    for (Scan s : _scans){
+      output += _ID + "," + i + "," + s.toString() + "/n";
+      i++;
+    }
+    return output;
+  }
 
 }

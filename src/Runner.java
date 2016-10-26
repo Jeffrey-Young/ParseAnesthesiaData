@@ -70,6 +70,9 @@ public class Runner {
       System.err.println(line);
       e.printStackTrace();
     }
+    
+    //TODO write out the data
+    
   }
 
 }
