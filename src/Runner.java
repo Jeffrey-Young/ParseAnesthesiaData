@@ -34,7 +34,7 @@ public class Runner {
         if (!line.split(",")[46].equals("")){
           Date d1 = format.parse(line.split(",")[46]);
           for (Scan scan : s.getScans()){
-            if (d1.after(scan.getDate())){
+            if (d1.before(scan.getDate())){
               scan.setKetamineDosage(scan.getKetamineDosage() + Double.parseDouble(line.split(",")[48]) + Double.parseDouble(line.split(",")[49]) + Double.parseDouble(line.split(",")[50]));
               scan.setDexdomitorDosage(scan.getDexdomitorDosage() + Double.parseDouble(line.split(",")[51]));
               scan.setAtipamezoleDosage(scan.getAtipamezoleDosage() + Double.parseDouble(line.split(",")[52]));
@@ -47,7 +47,7 @@ public class Runner {
         if (!line.split(",")[54].equals("")){
           Date d2 = format.parse(line.split(",")[54]);
           for (Scan scan : s.getScans()){
-            if (d2.after(scan.getDate())){
+            if (d2.before(scan.getDate())){
               scan.setKetamineDosage(scan.getKetamineDosage() + Double.parseDouble(line.split(",")[55]));
               break;
             }
@@ -57,7 +57,7 @@ public class Runner {
         if (!line.split(",")[56].equals("")){
           Date d3 = format.parse(line.split(",")[56]);
           for (Scan scan : s.getScans()){
-            if (d3.after(scan.getDate())){
+            if (d3.before(scan.getDate())){
               scan.setKetamineDosage(scan.getKetamineDosage() + Double.parseDouble(line.split(",")[57]));
               break;
             }
