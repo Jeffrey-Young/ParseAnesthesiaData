@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -71,7 +72,23 @@ public class Runner {
       e.printStackTrace();
     }
     
-    //TODO write out the data
+    //compound the dosage effect
+    for (Subject s : subjects){
+      s.computeCumulativeDoses();
+    }
+    
+    //write out results
+    try {
+      FileWriter output = new FileWriter("data/output.csv");
+      output.write("ID,ScanNumber,Ketamine,Dexdomitor,Atipamezole,Isoflurane\n");
+      for (Subject s : subjects){
+        output.write(s.toString());
+      }
+      output.flush();
+      output.close();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
     
   }
 
