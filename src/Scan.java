@@ -9,9 +9,8 @@ public class Scan {
   private double _dexdomitorDosage;
   private double _atipamezoleDosage;
   private double _isofluraneDosage;
-  private double _weight;
   
-  public Scan (String date, double weight, double ketamineDosage, double dexdomitorDosage, double atipamezoleDosage, double isofluraneDosage){
+  public Scan (String date, double ketamineDosage, double dexdomitorDosage, double atipamezoleDosage, double isofluraneDosage){
 
     SimpleDateFormat format = new SimpleDateFormat("d-MMM-yy");
     try {
@@ -19,7 +18,6 @@ public class Scan {
     } catch (ParseException e) {
       e.printStackTrace();
     }
-    _weight = weight;
     _ketamineDosage = ketamineDosage;
     _dexdomitorDosage = dexdomitorDosage;
     _atipamezoleDosage = atipamezoleDosage;
