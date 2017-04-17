@@ -103,6 +103,6 @@ public Date getDate(){
   }
   
   public String toString(){
-    return _ketamineDosage + "," + _dexdomitorDosage + "," + _atipamezoleDosage + "," + _isofluraneDosage;
+    return _cumulativeKetamineDosage + "," + _cumulativeDexdomitorDosage + "," + _cumulativeAtipamezoleDosage + "," + _cumulativeIsofluraneDosage;
   }
 }

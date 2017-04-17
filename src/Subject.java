@@ -21,10 +21,10 @@ public class Subject {
   public void computeCumulativeDoses(){
     for (int i = _scans.size() - 1; i > 0; i--){
       for (int j = i - 1; j >= 0 ; j--){
-        _scans.get(i).setKetamineDosage(_scans.get(i).getKetamineDosage() + _scans.get(j).getKetamineDosage());
-        _scans.get(i).setDexdomitorDosage(_scans.get(i).getDexdomitorDosage() + _scans.get(j).getDexdomitorDosage());
-        _scans.get(i).setAtipamezoleDosage(_scans.get(i).getAtipamezoleDosage() + _scans.get(j).getAtipamezoleDosage());
-        _scans.get(i).setIsofluraneDosage(_scans.get(i).getIsofluraneDosage() + _scans.get(j).getIsofluraneDosage());
+        _scans.get(i).setCumulativeKetamineDosage(_scans.get(i).getCumulativeKetamineDosage() + _scans.get(j).getKetamineDosage());
+        _scans.get(i).setCumulativeDexdomitorDosage(_scans.get(i).getCumulativeDexdomitorDosage() + _scans.get(j).getDexdomitorDosage());
+        _scans.get(i).setCumulativeAtipamezoleDosage(_scans.get(i).getCumulativeAtipamezoleDosage() + _scans.get(j).getAtipamezoleDosage());
+        _scans.get(i).setCumulativeIsofluraneDosage(_scans.get(i).getCumulativeIsofluraneDosage() + _scans.get(j).getIsofluraneDosage());
       }
     }
   }
