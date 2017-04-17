@@ -10,6 +10,11 @@ public class Scan {
   private double _atipamezoleDosage;
   private double _isofluraneDosage;
   
+  private double _cumulativeKetamineDosage;
+  private double _cumulativeDexdomitorDosage;
+  private double _cumulativeAtipamezoleDosage;
+  private double _cumulativeIsofluraneDosage;
+  
   public Scan (String date, double ketamineDosage, double dexdomitorDosage, double atipamezoleDosage, double isofluraneDosage){
 
     SimpleDateFormat format = new SimpleDateFormat("d-MMM-yy");
@@ -22,9 +27,46 @@ public class Scan {
     _dexdomitorDosage = dexdomitorDosage;
     _atipamezoleDosage = atipamezoleDosage;
     _isofluraneDosage = isofluraneDosage;
+    
+    _cumulativeKetamineDosage = 0;
+    _cumulativeDexdomitorDosage = 0;
+    _cumulativeAtipamezoleDosage = 0;
+    _cumulativeIsofluraneDosage = 0;
   }
   
-  public Date getDate(){
+  public double getCumulativeKetamineDosage() {
+	return _cumulativeKetamineDosage;
+}
+
+public void setCumulativeKetamineDosage(double _cumulativeKetamineDosage) {
+	this._cumulativeKetamineDosage = _cumulativeKetamineDosage;
+}
+
+public double getCumulativeDexdomitorDosage() {
+	return _cumulativeDexdomitorDosage;
+}
+
+public void setCumulativeDexdomitorDosage(double _cumulativeDexdomitorDosage) {
+	this._cumulativeDexdomitorDosage = _cumulativeDexdomitorDosage;
+}
+
+public double getCumulativeAtipamezoleDosage() {
+	return _cumulativeAtipamezoleDosage;
+}
+
+public void setCumulativeAtipamezoleDosage(double _cumulativeAtipamezoleDosage) {
+	this._cumulativeAtipamezoleDosage = _cumulativeAtipamezoleDosage;
+}
+
+public double getCumulativeIsofluraneDosage() {
+	return _cumulativeIsofluraneDosage;
+}
+
+public void setCumulativeIsofluraneDosage(double _cumulativeIsofluraneDosage) {
+	this._cumulativeIsofluraneDosage = _cumulativeIsofluraneDosage;
+}
+
+public Date getDate(){
     return _date;
   }
   
